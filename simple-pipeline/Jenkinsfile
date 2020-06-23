@@ -1,11 +1,9 @@
 pipeline {
     options {
-        // set a timeout of 30 minutes for this pipeline
         timeout(time: 30, unit: 'MINUTES')
     }
     agent {
       node {
-        // TODO: run this simple pipeline on jenkins 'master' node
         label 'master'
       }
     }
@@ -24,9 +22,6 @@ pipeline {
             }
         }
 
-        // TODO: ADD A STAGE THAT SAYS HELLO
-
-        // TODO: ADD AN APPROVAL STAGE
         stage('stage 2') {
           steps { 
             sh 'echo hello from stage 2!'
